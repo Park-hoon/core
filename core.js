@@ -56,6 +56,9 @@ function addskarr (){
             makesktable();
             //여기추가
             console.log(getCombination(skarr,3));
+            for(i=0;i<zh;i++){
+                addcore();
+            }
         }
         else{
             alert('다시 입력하세요.');
