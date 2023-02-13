@@ -1,3 +1,13 @@
+//배경 랜덤으로 바꿔주기
+var imgindex = ['pc배경화면_겨울풍경.png', 'pc배경화면_굴뚝.png', 'pc배경화면_눈사람.png', 'pc배경화면_붕어빵.png', 'pc배경화면_선물배달.png', 'pc배경화면_트리.png']
+var imgnum = Math.floor(Math.random() * 6);
+var img = imgindex[imgnum];
+$('body').css("background-image", "url(./pc/"+img+")");
+if(img == 'pc배경화면_눈사람.png' || img == 'pc배경화면_붕어빵.png'){
+    $('div').css("color", "black");
+    $('h1').css("color", "black");
+}
+
 var wnd;
 var zh;
 var skill;
@@ -39,11 +49,13 @@ function addskarr (){
             $('#mycore').empty();
             $('#mycore').append($('<br><button id="add">추가하기</button>'));
             $('#add').click(addcore);
-            $('#mycore').append($('<button id="del">삭제하기</button>'));
+            $('#mycore').append($('<button id="del">삭제하기</button><br><br>'));
             $('#del').click(delcore);
-            $('#mycore').append($('<br><button id="mycoresubmit">입력</button>'));
+            $('#mycore').append($('<br id="br"><button id="mycoresubmit">입력</button>'));
             $('#mycoresubmit').click(getcore);
             makesktable();
+            //여기추가
+            console.log(getCombination(skarr,3));
         }
         else{
             alert('다시 입력하세요.');
@@ -79,9 +91,9 @@ function addcore(){
     newinput.setAttribute('placeholder', '3글자만입력!');
     var coreid = "core"+counter;
     newinput.setAttribute('id', coreid);
-    $('#mycoresubmit').before( $('<span class="count">'+counter+'. </span>'));
-    $('#mycoresubmit').before(newinput);
-    $("#mycoresubmit").before($('<br>'));
+    $('#br').before( $('<span class="count">'+counter+'. </span>'));
+    $('#br').before(newinput);
+    $("#br").before($('<br>'));
     counter++;
 }
 function delcore(){

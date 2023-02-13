@@ -1,8 +1,16 @@
+/*폰트*/
+@import url('https://cdn.jsdelivr.net/npm/galmuri@latest/dist/galmuri.css');
+
+
 div{
     text-align: center;
+    font-family: Galmuri9;
+    color: white;
 }
 h1{
     text-align: center;
+    font-family: Galmuri9;
+    color: white;
 }
 h2{
     text-align: center;
@@ -10,7 +18,6 @@ h2{
 body {
     height: 100vh;
     width: 100vw;
-    background-image: url('./pc/pc배경화면_붕어빵.png');
     background-repeat : no-repeat;
     background-size : 100% 100%;
-  }
+}
