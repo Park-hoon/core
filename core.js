@@ -12,6 +12,7 @@ var wnd;
 var zh;
 var skill;
 var skarr = [];
+var counter = 1;
 
 $('#submit').click(function(){
     wnd = $('#wnd').val();
@@ -56,6 +57,7 @@ function addskarr (){
             makesktable();
             //여기추가
             console.log(getCombination(skarr,3));
+            counter = 1;
             for(i=0;i<zh;i++){
                 addcore();
             }
@@ -85,7 +87,6 @@ function makesktable(){
 }
 
 //코어 추가 빼기
-var counter = 1;
 function addcore(){
     var coreid = "core"+counter;
     var newinput = document.createElement('input');
