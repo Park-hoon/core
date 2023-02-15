@@ -1,12 +1,16 @@
 //배경 랜덤으로 바꿔주기
 var imgindex = ['pc배경화면_겨울풍경.png', 'pc배경화면_굴뚝.png', 'pc배경화면_눈사람.png', 'pc배경화면_붕어빵.png', 'pc배경화면_선물배달.png', 'pc배경화면_트리.png']
-var imgnum = Math.floor(Math.random() * 6);
+var imgnum = Math.floor(Math.random() * imgindex.length);
 var img = imgindex[imgnum];
-$('body').css("background-image", "url(./pc/"+img+")");
+$('#body').css("background-image", "url(./pc/"+img+")");
 if(img == 'pc배경화면_눈사람.png' || img == 'pc배경화면_붕어빵.png'){
     $('div').css("color", "black");
     $('h1').css("color", "black");
 }
+if(img == 'pc배경화면_트리.png'){
+    $('.snowflake').css('background', 'rgb(255, 236, 199)');
+}
+
 
 var wnd;
 var zh;
